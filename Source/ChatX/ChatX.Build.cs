@@ -1,26 +1,25 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Fill out your copyright notice in the Description page of Project Settings.
 
 using UnrealBuildTool;
 
-public class BullsAndCows : ModuleRules
+public class ChatX : ModuleRules
 {
-	public BullsAndCows(ReadOnlyTargetRules Target) : base(Target)
+	public ChatX(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[]
-		{
-			// Initial Dependencies
-			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput",
-			
-			// UI
-			"UMG", "Slate", "SlateCore"
-			
-		});
+			{
+				// Inintaial Dependency
+				"Core", "CoreUObject", "Engine", "InputCore",
+				
+				// UI
+				"UMG", "Slate", "SlateCore",
+			});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 		
-		PublicIncludePaths.AddRange(new string[] { "BullsAndCows" });
+		PublicIncludePaths.AddRange(new string[] { "ChatX" });
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

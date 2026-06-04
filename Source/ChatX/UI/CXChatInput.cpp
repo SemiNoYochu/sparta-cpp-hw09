@@ -14,6 +14,7 @@ void UCXChatInput::NativeConstruct()
 	{
 		EditableTextBox_ChatInput->OnTextCommitted.AddDynamic(this, &ThisClass::OnChatInputTextCommitted);		
 	}	
+	
 }
 
 void UCXChatInput::NativeDestruct()
@@ -24,6 +25,7 @@ void UCXChatInput::NativeDestruct()
 	{
 		EditableTextBox_ChatInput->OnTextCommitted.RemoveDynamic(this, &ThisClass::OnChatInputTextCommitted);
 	}
+	
 }
 
 void UCXChatInput::OnChatInputTextCommitted(const FText& Text, ETextCommit::Type CommitMethod)

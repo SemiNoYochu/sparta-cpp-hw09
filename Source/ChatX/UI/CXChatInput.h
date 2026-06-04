@@ -7,14 +7,19 @@
 #include "CXChatInput.generated.h"
 
 class UEditableTextBox;
+
 /**
  * 
  */
 UCLASS()
-class BULLSANDCOWS_API UCXChatInput : public UUserWidget
+class CHATX_API UCXChatInput : public UUserWidget
 {
 	GENERATED_BODY()
+	
 public:
+	UPROPERTY(meta = (BindWidget))
+	TObjectPtr<UEditableTextBox> EditableTextBox_ChatInput;
+	
 	virtual void NativeConstruct() override;
 
 	virtual void NativeDestruct() override;
@@ -22,8 +27,4 @@ public:
 protected:
 	UFUNCTION()
 	void OnChatInputTextCommitted(const FText& Text, ETextCommit::Type CommitMethod);
-	
-public:
-	UPROPERTY(meta = (BindWidget))
-	TObjectPtr<UEditableTextBox> EditableTextBox_ChatInput;
 };
